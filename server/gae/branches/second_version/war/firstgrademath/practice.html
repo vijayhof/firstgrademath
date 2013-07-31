@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html manifest="/firstgrademath/manifest.jsp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width; target-densitydpi=device-dpi; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=no;" />
+<title>First Grade Math</title>
+<script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="global.js"></script>
+
+<script>
+	$(document).ready(function()
+	{
+		//console.log("***********************************in ready");
+		document.addEventListener("deviceready", onDeviceReady, false);
+		onDeviceReady();
+	});
+
+	function onDeviceReady()
+	{
+		//console.log("***********************************in onDeviceReady");
+		initMethod();
+	}
+
+	function initMethod()
+	{
+	}
+
+	function goToSimple(opType)
+	{
+		var opTypeEnc = encodeURIComponent(opType);
+		location.href = "/firstgrademath/table_comp.jsp?opType=" + opTypeEnc + "&showanswers=0&showtap=1&showhideall=1";
+	}
+
+	function goToJumble(opType)
+	{
+		var opTypeEnc = encodeURIComponent(opType);
+		location.href = "/firstgrademath/table_comp.jsp?opType=" + opTypeEnc + "&showanswers=0&showtap=1&showhideall=1&jumble=1";
+	}
+
+
+</script>
+
+<link type="text/css" href="common_style.css" rel="stylesheet">
+<link type="text/css" href="index.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<script type="text/javascript">
+		var admob_vars = {
+			pubid : 'a14e7e374628b8b', // publisher id
+			bgcolor : 'C62919', // background color (hex)
+			text : 'FFFFFF', // font-color (hex)
+			test : false
+		// test mode, set to false to receive live ads
+		};
+	</script>
+	<script type="text/javascript" src="http://mmv.admob.com/static/iphone/iadmob.js"></script>
+
+	<div id="table1" class="pageClass"></div>
+
+	<div style='display: table; width: 100%'>
+
+		<div style='display: table-row'>
+			<div style='display: table-cell; width: 80%'>&nbsp;</div>
+		</div>
+
+		<div style='display: table-row'>
+			<div style='display: table-cell; width: 80%' onClick="goToSimple('+')">
+				<div class="mainButton">Simple Add</div>
+			</div>
+		</div>
+
+		<div style='display: table-row'>
+			<div style='display: table-cell; width: 80%'>&nbsp;</div>
+		</div>
+
+		<div style='display: table-row'>
+			<div style='display: table-cell; width: 80%' onClick="goToJumble('+')">
+				<div class="mainButton">Jumble Add</div>
+			</div>
+		</div>
+
+		<div style='display: table-row'>
+			<div style='display: table-cell; width: 80%'>&nbsp;</div>
+		</div>
+
+		<div style='display: table-row'>
+			<div style='display: table-cell; width: 80%' onClick="goToSimple('-')">
+				<div class="mainButton">Simple Subtract</div>
+			</div>
+		</div>
+
+		<div style='display: table-row'>
+			<div style='display: table-cell; width: 80%'>&nbsp;</div>
+		</div>
+
+		<div style='display: table-row'>
+			<div style='display: table-cell; width: 80%' onClick="goToJumble('-')">
+				<div class="mainButton">Jumble Subtract</div>
+			</div>
+		</div>
+
+		<div style='display: table-row'>
+			<div style='display: table-cell; width: 80%'>&nbsp;</div>
+		</div>
+
+		<div style='display: table-row'>
+			<div style='display: table-cell; width: 80%' onClick="goToSimple('*')">
+				<div class="mainButton">Simple Multiply</div>
+			</div>
+		</div>
+
+		<div style='display: table-row'>
+			<div style='display: table-cell; width: 80%'>&nbsp;</div>
+		</div>
+
+		<div style='display: table-row'>
+			<div style='display: table-cell; width: 80%' onClick="goToJumble('*')">
+				<div class="mainButton">Jumble Multiply</div>
+			</div>
+		</div>
+
+		<div style='display: table-row'>
+			<div style='display: table-cell; width: 80%'>&nbsp;</div>
+		</div>
+
+		<div style='display: table-row'>
+			<div style='display: table-cell; width: 80%' onClick="goToSimple('/')">
+				<div class="mainButton">Simple Divide</div>
+			</div>
+		</div>
+
+		<div style='display: table-row'>
+			<div style='display: table-cell; width: 80%'>&nbsp;</div>
+		</div>
+
+		<div style='display: table-row'>
+			<div style='display: table-cell; width: 80%' onClick="goToJumble('/')">
+				<div class="mainButton">Jumble Divide</div>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>

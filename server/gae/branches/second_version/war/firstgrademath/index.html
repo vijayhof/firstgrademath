@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html manifest="/firstgrademath/manifest.jsp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width; target-densitydpi=device-dpi; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=no;" />
+<title>First Grade Math</title>
+<script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="global.js"></script>
+
+<script>
+	$(document).ready(function()
+	{
+		//console.log("***********************************in ready");
+		document.addEventListener("deviceready", onDeviceReady, false);
+		onDeviceReady();
+	});
+
+	function onDeviceReady()
+	{
+		//console.log("***********************************in onDeviceReady");
+		initMethod();
+	}
+
+	function initMethod()
+	{
+	}
+
+	function goToLearn()
+	{
+		location.href = "/firstgrademath/learn.html";
+	}
+
+	function goToPractice()
+	{
+		location.href = "/firstgrademath/practice.html";
+	}
+
+	function goToTest()
+	{
+		location.href = "/firstgrademath/taketest.html";
+	}
+</script>
+
+<link type="text/css" href="common_style.css" rel="stylesheet">
+<link type="text/css" href="index.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<script type="text/javascript">
+		var admob_vars = {
+			pubid : 'a14e7e374628b8b', // publisher id
+			bgcolor : 'C62919', // background color (hex)
+			text : 'FFFFFF', // font-color (hex)
+			test : false
+		// test mode, set to false to receive live ads
+		};
+	</script>
+	<script type="text/javascript" src="http://mmv.admob.com/static/iphone/iadmob.js"></script>
+
+	<div id="table1" class="pageClass"></div>
+
+	<div style='display: table; width: 100%'>
+
+		<div style='display: table-row'>
+			<div style='display: table-cell; width: 80%'>&nbsp;</div>
+		</div>
+
+		<div style='display: table-row;'>
+			<div class='appTitle' style='display: table-cell; width: 100%;'>
+				<img src="firstgrademath_title.png" width="100%">
+			</div>
+		</div>
+
+		<div style='display: table-row'>
+			<div style='display: table-cell; width: 80%'>&nbsp;</div>
+		</div>
+
+		<div style='display: table-row'>
+			<div style='display: table-cell; width: 80%' onClick="goToLearn()">
+				<div class="mainButton">Learn</div>
+			</div>
+		</div>
+
+		<div style='display: table-row'>
+			<div style='display: table-cell; width: 80%'>&nbsp;</div>
+		</div>
+
+		<div style='display: table-row'>
+			<div style='display: table-cell; width: 80%' onClick="goToPractice()">
+				<div class="mainButton">Practice</div>
+			</div>
+		</div>
+
+		<div style='display: table-row'>
+			<div style='display: table-cell; width: 80%'>&nbsp;</div>
+		</div>
+
+		<div style='display: table-row'>
+			<div style='display: table-cell; width: 80%' onClick="goToTest()">
+				<div class="mainButton">Test Yourself</div>
+			</div>
+		</div>
+
+		<div style='display: table-row'>
+			<div style='display: table-cell; width: 80%'>&nbsp;</div>
+		</div>
+
+		<!--   div style='display: table-row'>
+			<div style='display: table-cell; width: 80%' onClick="goToSettings()">
+				<div class="mainButton">Flash Cards</div>
+			</div>
+		</div -->
+
+	</div>
+
+</body>
+</html>

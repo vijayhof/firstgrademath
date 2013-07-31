@@ -1,0 +1,92 @@
+html {
+	font-size: 100%;
+}
+
+body {
+	font-size: 1.5em;
+}
+
+* {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+	
+.pageClass{
+    width: 100%;
+    margin-top:.25em;
+}
+
+.tableClass{
+}
+
+.rowClass{
+    height: 1.75em;
+}
+
+.cellClass{
+}
+
+.clickButton {
+	width: auto;
+	text-align: center;
+	vertical-align:middle; 
+	margin-left:auto; 
+	margin-right:auto;
+	font-size:.75em;
+	line-height: 1.75em;
+	color: #fff;
+	border-radius: .313em;
+	border: .063em solid #0630e6; 
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#6aabe3), to(#0630e6));
+}
+
+.numberButton {
+	width: 70%;
+	text-align: center;
+	vertical-align:middle; 
+	margin-left:auto; 
+	margin-right:auto; 
+	font-weight: bold;
+	line-height: 2em;
+	color: #fff;
+	border-radius: .313em;
+	border: .063em solid #82ac71; 
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#16c710), to(#10940b));
+}
+
+.opButton {
+	width: 70%;
+	text-align: center;
+	vertical-align:middle; 
+	margin-left:auto; 
+	margin-right:auto;
+	margin-bottom:.12em;
+	margin-top:.12em;
+	font-weight: bold;
+	line-height: 2em;
+	border-radius: .313em;
+	border: .063em solid #bbb; 
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#eeeeee), to(#bbbbbb));
+}
+
+.separator1 {
+	height: .75em;
+}
+
+.calcLikeButton {
+	width: 100%;
+	text-align: center;
+	vertical-align:middle; 
+	margin-left:auto; 
+	margin-right:auto;
+	margin-bottom:.12em;
+	margin-top:.12em;
+	font-weight: bold;
+	line-height: 2.35em;
+	border-radius: .313em;
+	border: .063em solid #bbb; 
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#eeeeee), to(#cccccc) ); /* original */
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#6aabe3), to(#0630e6) ); /* dark blue */
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#2a96e3), to(#d4ebf9)); /* light blue */
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#effaff), to(#89c7ed)); /* light blue */
+}
+

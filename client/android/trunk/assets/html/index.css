@@ -1,0 +1,29 @@
+html {
+	font-size: 16pt;
+}
+
+body {
+}
+	
+.pageClass{
+    width: 100%;
+}
+
+.tableClass{
+    font-size: 1em;
+}
+
+
+.rowClass{
+    height: 2em;
+}
+
+.cellClass{
+    font-size: 1em;
+}
+
+.clickButtonClass{
+    font-size: 1em;
+    width: 100%;
+    color:red;
+}

@@ -1,0 +1,25 @@
+body {
+	background-color: #effaff;
+}
+
+.appTitle {
+	text-align:center;
+	color:#0630e6;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.mainButton {
+	width: 80%;
+	text-align: center;
+	vertical-align:middle; 
+	margin-left:auto; 
+	margin-right:auto; 
+	font-weight: bold;
+	font-size: 1em;
+	line-height: 2.1em;
+	color: #fff;
+	border-radius: .313em;
+	border: .063em solid #0630e6; 
+	background-image: -webkit-gradient(linear, center top, center bottom, to(#0630e6), from(#6aabe3));
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport"
+	content="width=device-width; target-densitydpi=device-dpi; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=no;" />
+<title>Addition and Multiplication</title>
+<!--  script type="text/javascript" charset="utf-8" src="phonegap.js"></script-->
+<script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
+
+<script>
+     $(document).ready(function(){
+    	 console.log("**********************************in ready");
+         document.addEventListener("deviceready", onDeviceReady, true);
+    	 console.log("**********************************in ready2");
+     });
+     
+
+	function onDeviceReady() 
+	{
+		console.log("**********************************in onDeviceReady");
+		//navigator.notification.alert("PhoneGap is working");
+		setTableOf(5);
+		setOperatorType('+');
+		hey();
+		hideClickAll();
+	}
+	
+function getTableOf()
+{
+   return parseInt(localStorage.getItem("tableOf"));
+}
+
+function setTableOf(tableOf)
+{
+   localStorage.setItem("tableOf", tableOf);
+}
+
+function getOperatorType()
+{
+   return localStorage.getItem("operatorType");
+}
+
+function setOperatorType(operatorType)
+{
+   localStorage.setItem("operatorType", operatorType);
+}
+
+function changeNumber(newNumber)
+{
+   setTableOf(newNumber);
+   hey();
+   hideClickAll();
+}
+
+function changeOperatorType(newOperatorType)
+{
+   setOperatorType(newOperatorType);
+   hey();
+   hideClickAll();
+}
+
+function hey()
+{
+  var table_of = getTableOf();
+  var operatorType = getOperatorType();
+  var strOperatorType;
+  var i = 1;
+  var htmlStr = "<div class='tableClass'><table width='100%'>";
+  for(i=1; i <=10; i++)
+  {
+    var rowValue;
+    if(operatorType == '+')
+    {
+        rowValue = table_of + i;
+        strOperatorType = '+';
+   }
+    else if(operatorType == '*')
+    {
+        rowValue = table_of * i;
+        strOperatorType = 'x';
+    }
+    
+      htmlStr += "<tr id='row" + i + "' class='rowClass'>" +
+	"<td class='cellClass' align='right'>" + table_of + "</td>" + 
+	"<td class='cellClass' align='center'>" + strOperatorType + "</td>" + 
+	"<td class='cellClass' align='left'>" + i + "</td>" +
+	"<td class='cellClass' align='left'>=</td>" + 
+	"<td class='cellClass'> <div id='calcValue" + i + "' class='calcValue'>" + rowValue + "</div></td>" +
+	"<td class='cellClass' align='center'><div class='clickButtonClass'><input type='button' value='Click' onClick='showHide(" + i + ")'></div></td>" +
+	"</tr>";
+  }
+
+  htmlStr = htmlStr + "</table></div>";
+  $("#table1").html(htmlStr);
+}
+
+function showHide(rowNum)
+{
+	$('#calcValue' + rowNum).toggle();
+}
+
+function showClickAll(rowNum)
+{
+	$('.calcValue').show();
+}
+
+function hideClickAll(rowNum)
+{
+	$('.calcValue').hide();
+}
+
+
+</script>
+
+<link type="text/css" href="file:///android_asset/html/index.css"
+	rel="stylesheet">
+<link type="text/css" href="index.css" rel="stylesheet">
+
+</head>
+
+<body>
+<div id="table1" class="pageClass"></div>
+
+
+<input type="button" value=" 1 " onClick="changeNumber(1)">
+&nbsp;&nbsp;
+<input type="button" value=" 2 " onClick="changeNumber(2)">
+&nbsp;&nbsp;
+<input type="button" value=" 3 " onClick="changeNumber(3)">
+&nbsp;&nbsp;
+<input type="button" value=" 4 " onClick="changeNumber(4)">
+&nbsp;&nbsp;
+<input type="button" value=" 5 " onClick="changeNumber(5)">
+&nbsp;&nbsp;
+<input type="button" value=" 6 " onClick="changeNumber(6)">
+&nbsp;&nbsp;
+<input type="button" value=" 7 " onClick="changeNumber(7)">
+&nbsp;&nbsp;
+<input type="button" value=" 8 " onClick="changeNumber(8)">
+&nbsp;&nbsp;
+<input type="button" value=" 9 " onClick="changeNumber(9)">
+&nbsp;&nbsp;
+<input type="button" value=" 10 " onClick="changeNumber(10)">
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="button" value="Addition" onClick="changeOperatorType('+')">
+&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="button" value="Multiplication"
+	onClick="changeOperatorType('*')">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="button" value="Show All" onClick="showClickAll()">
+&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="button" value="Hide All" onClick="hideClickAll()">
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<!-- input type="number" name="answer" / -->
+
+Hello Kids2!!
+</body>
+</html>

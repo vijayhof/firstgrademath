@@ -1,0 +1,9 @@
+.questionTable {
+	font-size: 1.25em;
+	line-height: 1.5em;
+}
+
+.wrongAnswer {
+	color: red;
+}
+
